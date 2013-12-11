@@ -3,15 +3,9 @@ def caesar_cipher(str, n)
   l = "abcdefghijklmnopqrstuvwsyz".split("")
   out = []
   a.each do |e|
-    dcse = true
+    dcse = nil
     if l.include?(e.downcase) 
-      if  e == e.downcase
-        dcse = true
-      else
-        dcse = false
-      end
-    else
-      dcse = nil
+      dcse =  (e == e.downcase)
     end
     case dcse
     when nil then out << e
